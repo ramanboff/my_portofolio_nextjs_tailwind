@@ -1,3 +1,4 @@
+"use client"
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import {
@@ -16,23 +17,25 @@ import web3 from "../../public/web3.png";
 import web4 from "../../public/web4.png";
 import web5 from "../../public/web5.png";
 import web6 from "../../public/web6.png";
+import {useState} from "react"
 
 export default function Home() {
+  const [darkMode, setdarkMode] = useState(false)
   return (
-    <div>
+    <div className={darkMode?"dark":""}>
       <Head>
         <title>Raman Bayramov Protofolio</title>
         <meta name="description" content="R" />
         <link rel="icon" href=".favicon.ico" />
       </Head>
-      <main className="ng-white px-10 md:px-20 lg:px-40">
+      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         {/*   section- 1 */}
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-burtons">Raman</h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill className=" cursor-pointer text-2xl" />
+                <BsFillMoonStarsFill onClick={() => setdarkMode(!darkMode)} className=" cursor-pointer text-2xl" />
               </li>
               <li>
                 <a
@@ -81,7 +84,7 @@ export default function Home() {
             </p>
           </div>
           <div className="text-center lg:flex gap-10 ">
-            <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10">
+            <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
               <Image src={design} width={100} height={100} alt="design" />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Beautiful Designs
@@ -96,7 +99,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">Figma</p>
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
-            <div className="flex flex-col items-center mx-auto shadow-lg p-10 rounded-xl my-10">
+            <div className="flex flex-col items-center mx-auto shadow-lg p-10 rounded-xl my-10 dark:bg-white">
               <Image src={consulting} width={100} height={100} alt="design" />
               <h3 className="text-lg font-medium pt-8 pb-2">
                 Beautiful Designs
@@ -111,7 +114,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">Figma</p>
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
-            <div className="flex flex-col items-center shadow-lg p-10 rounded-xl my-10">
+            <div className="flex flex-col items-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
               <Image src={code} width={100} height={100} alt="design" />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Beautiful Designs
