@@ -53,7 +53,7 @@ export default function Home() {
             <AiFillLinkedin />
             <AiFillYoutube />
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden">
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mb-10 overflow-hidden">
             <Image src={raman} alt="profile" layout="fill" objectFit="cover" />
           </div>
         </section>
@@ -74,7 +74,7 @@ export default function Home() {
             </p>
           </div>
           <div className="text-center">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+            <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10">
               <Image src={design} width={100} height={100} alt="design"/>
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Beautiful Designs
@@ -89,7 +89,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">Figma</p>
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
-            <div className="text-center mx-auto shadow-lg p-10 rounded-xl my-10">
+            <div className="flex flex-col items-center mx-auto shadow-lg p-10 rounded-xl my-10">
               <Image src={consulting} width={100} height={100} alt="design"/>
               <h3 className="text-lg font-medium pt-8 pb-2">
                 Beautiful Designs
@@ -104,7 +104,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">Figma</p>
               <p className="text-gray-800 py-1">Indesign</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
+            <div className="flex flex-col items-center shadow-lg p-10 rounded-xl my-10">
               <Image src={code} width={100} height={100} alt="design"/>
               <h3 className="text-lg font-medium pt-8 pb-2  ">
                 Beautiful Designs
