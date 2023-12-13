@@ -5,6 +5,8 @@ import {
   AiFillLinkedin,
   AiFillYoutube,
 } from "react-icons/ai";
+import Image from "next/image"
+import raman from "../../public/dev-ed-wave.png"
 
 export default function Home() {
   return (
@@ -40,10 +42,14 @@ export default function Home() {
               needs. Join me down below and let's get cracking!
             </p>
           </div>
-          <div>
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
             <AiFillTwitterCircle />
             <AiFillLinkedin />
             <AiFillYoutube />
+          </div>
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden">
+            <Image src={raman} alt="profile" layout="fill" objectFit="cover"/>
+
           </div>
         </section>
       </main>
